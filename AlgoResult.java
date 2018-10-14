@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
  */
 /**
  *
- * @author MUJ
+ * @author ArcherL
  */
 public class AlgoResult extends javax.swing.JFrame {
 
@@ -125,6 +125,11 @@ public class AlgoResult extends javax.swing.JFrame {
             //  for(int i=0;i<count;i++){
             //  System.out.println(amount[i]);
             // }
+            
+            /** The main debt/credit settler works here with simple additiona and subtraction of the calulated data
+            received from the database query
+            **/
+            
             int pos = 0, ifcount = 0;
             float val = 0;
             for (int i = 0; i < amount.length; i++) {
@@ -183,6 +188,7 @@ public class AlgoResult extends javax.swing.JFrame {
         NewJFrame jf = new NewJFrame();
         Connection connect = jf.getConnect();
         try {
+            //calling the inbuilt query in the database named algoRun
             CallableStatement cStmt = connect.prepareCall("{call algoRun(?,?,?,?)}");
 
             cStmt.registerOutParameter(1, java.sql.Types.FLOAT);
@@ -191,8 +197,7 @@ public class AlgoResult extends javax.swing.JFrame {
             cStmt.registerOutParameter(4, java.sql.Types.FLOAT);
 
             cStmt.executeUpdate();
-
-            // this gave me hard time bC 
+            
             jLabelHe.setText("Rs. " + String.valueOf(cStmt.getFloat(1)));
             jLabelLe.setText("Rs. " + String.valueOf(cStmt.getFloat(2)));
             jLabelTe.setText("Rs. " + String.valueOf(cStmt.getFloat(3)));
