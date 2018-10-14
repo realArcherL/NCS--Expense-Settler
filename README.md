@@ -6,6 +6,8 @@ It takes a basic connectivity between java based Desktop Application having its 
 
 ## Credits ##
 Mathematical Modelling and Designing- P.V.S Chakradhar & ArcherL.
+
 Algorithm Designing - ArcherL, Sahil Kukureja & P.V.S Chakradhar.
+
 Coding(Front end & backend)- ArcherL.
 
