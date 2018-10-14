@@ -11,4 +11,3 @@ Algorithm Designing - ArcherL, Sahil Kukureja & P.V.S Chakradhar.
 
 Coding(Front end & backend)- ArcherL.
 
-This project is dedicated to my grandmother.
